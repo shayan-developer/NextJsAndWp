@@ -1,0 +1,17 @@
+
+  .textCard {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+    -webkit-box-orient: vertical;
+    font-size: 1rem;
+    text-align: right;
+    direction: rtl;
+  }
+  .card{
+    margin-bottom: 2rem;
+  }
+  .btn{
+    font-size: 1.1rem;
+  }

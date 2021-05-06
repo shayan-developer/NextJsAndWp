@@ -1,0 +1,14 @@
+.commentCount{
+    background-color: #188FFE ;
+    color: #ffffff;
+    width: 100% !important;
+    border-radius: 1rem;
+    margin-bottom: 4rem;
+    font-family: "sahel",sans-serif;
+}
+.text{
+    color: #000 !important;
+    font-size: 1rem;
+    text-align: right;
+    direction: rtl;
+}

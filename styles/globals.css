@@ -1,16 +1,49 @@
-html,
+@import 'bootstrap/dist/css/bootstrap.css';
+@import '~antd/dist/antd.css';
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
+  /* background: rgb(193,155,218);
+  background: linear-gradient(90deg, rgba(193,155,218,1) 33%, rgba(205,72,231,1) 63%); */
+  background-image: url("../public/bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 * {
   box-sizing: border-box;
+}
+@font-face {
+  font-family: "sahel";
+  src: url("../public/fonts/Sahel.woff")format("woff");
+}
+.sahel{
+  font-family: "sahel",sans-serif;
+}
+.bar-of-progress{
+  z-index: 100;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+}
+ 
+
+::-webkit-scrollbar-thumb {
+  background: #188FFE ; 
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0081fa; 
+}
+.rtl{
+  direction: rtl;
 }

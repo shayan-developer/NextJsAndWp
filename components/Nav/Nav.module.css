@@ -1,0 +1,14 @@
+
+.navigation{
+    position: fixed !important;
+    z-index: 7;
+    direction: rtl;
+    right: 0 !important;
+    bottom: 50%;
+    font-family: "sahel",sans-serif;
+  }
+  .menu{
+    background:linear-gradient(to right bottom , rgba(255,255,255,0.7),rgba(255,255,255,0.3)) !important;
+    backdrop-filter: blur(3.0px) !important;
+    direction: ltr;
+  }

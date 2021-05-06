@@ -1,0 +1,16 @@
+.box{
+    width: 100% !important;
+    background:linear-gradient(to right bottom , rgba(255,255,255,0.5),rgba(255,255,255,0.3)) ;
+    backdrop-filter: blur(30px);
+    border-radius: 1rem;
+    margin-bottom: 3rem;
+    padding: .7rem;
+
+}
+.text{
+    font-size: .9rem;
+    direction: rtl;
+    overflow: hidden;
+    text-align: right;
+    padding: 0 .5rem;
+}

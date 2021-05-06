@@ -1,0 +1,23 @@
+.text{
+    color: #F30345;
+    font-family: "sahel",sans-serif;
+}
+.item{
+    position: relative;
+}
+.box{
+    background:linear-gradient(to right bottom , rgba(255,255,255,0.7),rgba(255,255,255,0.3)) ;
+    backdrop-filter: blur(3.0px);
+    padding: 1rem 2rem;
+    z-index: 8;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1rem;
+}
+.image{
+    height: 90vh;
+    width: 100%;
+    object-fit: cover;
+}
