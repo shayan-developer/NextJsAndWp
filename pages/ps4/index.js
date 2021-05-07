@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout from '../../components/Layaout/Layout'
+// import Layout from '../../components/Layaout/Layout'
 import styles from '../../styles/ps4.module.css'
 import fetcher from '../../lib/fetcher';
 import { Ps4Posts } from '../../lib/query';
@@ -7,6 +7,8 @@ import Link from 'next/link';
 import Head from 'next/head'
 import { Button, Card } from 'antd';
 import Parallelogram from '../../components/Parallelogram/Parallelogram'
+import dynamic from 'next/dynamic';
+const Layout=dynamic(()=>import("../../components/Layaout/Layout"))
 export default function Index({ data }) {
     const { Meta } = Card;
     return (
@@ -18,15 +20,13 @@ export default function Index({ data }) {
             {data.map(post => {
                 return <article key={post.id} className={`${styles.card} sahel`}>
                     <Card
-                        hoverable
-                        title={<div className="rtl">{post.title}</div>}
+                        title={<h5 className="rtl">{post.title}</h5>}
                         actions={[<Link href={`/ps4/${post.slug}`}><Button className={styles.btn} type="primary" shape="round">ادامه مطلب</Button></Link>]}
                         style={{ width: 500 }, { borderRadius: "0.5rem" }}
                         cover={<img alt="بازی " src={post.featuredImage.node.sourceUrl} />}
                     >
                         <Meta  description={<div className={styles.textCard} dangerouslySetInnerHTML={{ __html: post.content }} />} />
                     </Card>
-                    {console.log(post.title)}
                 </article>
             })}
         </Layout>

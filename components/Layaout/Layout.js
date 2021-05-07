@@ -10,7 +10,7 @@ export default function Layout({ children, Header }) {
             {Header}
                 <Nav />
                 <div className="row justify-content-center mt-5">
-                    <main className={`col-8 text-center ${styles.glass} ${styles.main}`}>
+                    <main className={`col-md-8 text-center ${styles.glass} ${styles.main}`}>
                         {children}
                     </main>
                     <aside className={`col-3 ${styles.aside}`}>

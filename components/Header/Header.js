@@ -6,14 +6,13 @@ const contentStyle = {
     width: "100%",
     color: '#fff',
     borderRadius: '1rem',
-    // lineHeight: '500px',
     textAlign: 'center',
 };
 export default function Header() {
     return (
         <header className={`row justify-content-center mt-1`}>
-            <div className={`col-12 mt-2`}>
-                <Carousel  autoplay effect="fade">
+            <div className={`col-12 mt-2 `}>
+                <Carousel  autoplay effect="fade" >
                     <div>
                         <div style={contentStyle}>
                             <Image  className={styles.image} src="../re.jpg" preview={false} />

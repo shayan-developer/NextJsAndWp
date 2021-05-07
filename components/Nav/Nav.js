@@ -24,6 +24,8 @@ export default function Nav (){
         return ['1']
       case "/news":
         return ['2']
+        case "/xbox":
+          return["3"]
       default:
         return ['2']
     }
@@ -47,8 +49,10 @@ export default function Nav (){
           <Menu.Item key="2" icon={<FaPlaystation />}>
             <Link href="/ps4"> PS4 </Link>
           </Menu.Item>
-          <Menu.Item key="3" icon={<FaXbox />}> XBOX </Menu.Item>
-          <Menu.Item key="3" icon={<FaDesktop />}> PC </Menu.Item>
+          <Menu.Item key="3" icon={<FaXbox />}>
+          <Link href="/xbox"> XBOX </Link>
+             </Menu.Item>
+          <Menu.Item key="4" icon={<FaDesktop />}> PC </Menu.Item>
 
         </Menu>
       </nav>
