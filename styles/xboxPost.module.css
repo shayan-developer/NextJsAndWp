@@ -12,3 +12,25 @@
     text-align: right;
     direction: rtl;
 }
+.card{
+    border-radius: 1rem;
+    backdrop-filter: blur(30px);
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4));
+}
+.LastPost {
+    border-radius: 1rem;
+    font-family: "sahel", sans-serif;
+    direction: rtl;
+    margin: 1rem 0;
+    backdrop-filter: blur(3.0px);
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    overflow: hidden;
+}
+.imgLast {
+    cursor: pointer;
+    transition: transform 1s;
+}
+
+.imgLast:hover {
+    transform: scale(1.1);
+}

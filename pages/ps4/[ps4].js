@@ -14,7 +14,6 @@ export default function News({ post, comments, LastPosts }) {
     const { Meta } = Card;
     const AllComments = comments.comments.nodes
     const MyLastPosts = LastPosts.data.posts.nodes
-    console.log(MyLastPosts);
     return (
         <Layout>
             <Head>
@@ -25,7 +24,7 @@ export default function News({ post, comments, LastPosts }) {
                     <Col>
                         <Card
                            className={styles.card}
-                            title={<h5 className="rtl">{post.title}</h5>}
+                            title={<p className="rtl bold">{post.title}</p>}
                             cover={<img alt="بازی " src={post.featuredImage.node.sourceUrl} />}
                         >
                             <Meta description={<div className={styles.text} dangerouslySetInnerHTML={{ __html: post.content }} />} />

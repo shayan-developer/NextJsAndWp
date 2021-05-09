@@ -1,17 +1,49 @@
 
 .textCard {
-  overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 3; /* number of lines to show */
+  -webkit-line-clamp: 3; 
   -webkit-box-orient: vertical;
   text-align: right;
   font-size: 1rem;
   direction: rtl;
 }
+.textCard img{
+  max-width: 100%;
+  height: auto;
+}
 .card{
   margin-bottom: 2rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  backdrop-filter: blur(30px);
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4));
 }
-.btn{
+.Imgcard{
+  cursor: pointer;
+  transform-origin: 50% 65%;
+  transition: transform 2s, filter 2s ease-in-out;
+}
+.BoxImage{
+  overflow: hidden;
+  position: relative;
+}
+.BoxImage:hover .Imgcard{
+transform: scale(1.1);
+transition: ease-in 1s;
+filter: brightness(30%);
+}
+.textImg{
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-size: 1rem;
+  visibility: hidden;
+  transition: all 1s ease-in-out;
+  transition-delay: .7s;
 }
+.BoxImage:hover .textImg{
+  visibility: visible;
+  }

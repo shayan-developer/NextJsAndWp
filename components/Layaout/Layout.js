@@ -6,8 +6,8 @@ export default function Layout({ children, Header }) {
     return (
         <>
             <NavUp />
-            <div className="container-fluid">
             {Header}
+            <div className="container-fluid">
                 <Nav />
                 <div className="row justify-content-center mt-5">
                     <main className={`col-md-8 text-center ${styles.glass} ${styles.main}`}>

@@ -10,8 +10,8 @@ const contentStyle = {
 };
 export default function Header() {
     return (
-        <header className={`row justify-content-center mt-1`}>
-            <div className={`col-12 mt-2 `}>
+        <header className={`row w-100 mx-0 justify-content-center`}>
+            <div className={`col-12 w-100 p-0 `}>
                 <Carousel  autoplay effect="fade" >
                     <div>
                         <div style={contentStyle}>

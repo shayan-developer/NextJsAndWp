@@ -13,13 +13,16 @@ function Index({ posts }) {
         <Layout>
             <Parallelogram> XBOX اخبار</Parallelogram>
             {posts.map((post) => {
-                return <article key={post.id} className={`${styles.card} sahel`} >
+                return <article key={post.id} className={` sahel`} >
                     <Card
-                        title={<h5 className="rtl">{post.title}</h5>}
-                        actions={[<Link href={`/xbox/${post.slug}`}><Button className={styles.btn} type="primary" shape="round">ادامه مطلب</Button></Link>]}
-                        style={{ width: 500 }, { borderRadius: "0.5rem" }}
-                        cover={<Image alt="بازی "  src={post.featuredImage.node.sourceUrl}
-                        preview={false} />}
+                        title={<p className="rtl bold">{post.title}</p>}
+                        className={styles.card}
+                        cover={<div className={styles.BoxImage}>
+                            <Link href={`/xbox/${post.slug}`}>
+                                <Image preview={false} alt="بازی " className={styles.Imgcard} src={post.featuredImage.node.sourceUrl} />
+                            </Link>
+                            <p className={styles.textImg}>برای ادامه مطلب کلیک کنید</p>
+                        </div>}
                     >
                         <Meta description={<div className={styles.textCard} dangerouslySetInnerHTML={{ __html: post.content }} />} />
                     </Card>

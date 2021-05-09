@@ -1,14 +1,13 @@
 import Head from 'next/head'
-import { Button, Card } from 'antd';
+import { Button, Card, Image } from 'antd';
 import Header from '../components/Header/Header'
 import dynamic from "next/dynamic"
-// import Layout from '../components/Layaout/Layout'
 import Parallelogram from '../components/Parallelogram/Parallelogram'
 import styles from '../styles/Home.module.css'
 import fetcher from '../lib/fetcher';
 import { AllPosts } from '../lib/query';
 import Link from 'next/link';
-const Layout=dynamic(()=>import("../components/Layaout/Layout"))
+const Layout = dynamic(() => import("../components/Layaout/Layout"))
 export default function Home({ data }) {
   const { Meta } = Card;
   return (
@@ -19,12 +18,16 @@ export default function Home({ data }) {
       <Parallelogram>آخرین مطالب</Parallelogram>
       {data.map(post => {
 
-        return <article key={post.id} className={`${styles.card} sahel`}>
+        return <article key={post.id} className={`sahel`}>
           <Card
-            actions={[<Link href={`/${post.categories.nodes[0].name}/${post.slug}`}><Button className={styles.btn} type="primary" shape="round">ادامه مطلب</Button></Link>]}
-            style={{ width: 500 },{overflow:"hidden"}}
-            title={<h5 className="rtl">{post.title}</h5>}
-            cover={<img alt="بازی "  src={post.featuredImage.node.sourceUrl} />}>
+            className={styles.card}
+            title={<p className="rtl bold">{post.title}</p>}
+            cover={<div className={styles.BoxImage}>
+              <Link  href={`/${post.categories.nodes[0].name}/${post.slug}`}>
+              <Image preview={false} alt="بازی " className={styles.Imgcard} src={post.featuredImage.node.sourceUrl} />
+            </Link>
+            <p className={styles.textImg}>برای ادامه مطلب کلیک کنید</p>
+            </div>}>
             <Meta description={<div className={styles.textCard} dangerouslySetInnerHTML={{ __html: post.content }} />} />
           </Card>
         </article>

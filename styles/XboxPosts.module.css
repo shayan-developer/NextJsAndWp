@@ -1,18 +1,40 @@
-
 .textCard {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 3; /* number of lines to show */
-    -webkit-box-orient: vertical;
-    text-align: right;
-    font-size: 1rem;
-    direction: rtl;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
+  text-align: right;
+  font-size: 1rem;
+  direction: rtl;
+}
+
+.Imgcard{
+  cursor: pointer;
+  transform-origin: 50% 65%;
+  transition: transform 2s, filter 2s ease-in-out;
+}
+.BoxImage{
+  overflow: hidden;
+  position: relative;
+}
+.BoxImage:hover .Imgcard{
+transform: scale(1.1);
+transition: ease-in 1s;
+filter: brightness(30%);
+}
+.textImg{
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1rem;
+  visibility: hidden;
+  transition: all 1s ease-in-out;
+  transition-delay: .7s;
+}
+.BoxImage:hover .textImg{
+  visibility: visible;
   }
-.card{
-    margin-bottom: 2rem;
-  }
-.btn{
-    font-size: 1rem;
-  }
-  
