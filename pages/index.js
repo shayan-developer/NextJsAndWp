@@ -6,7 +6,7 @@ import dynamic from "next/dynamic"
 import Parallelogram from '../components/Parallelogram/Parallelogram'
 import styles from '../styles/Home.module.css'
 import fetcher from '../lib/fetcher';
-import { AllPost } from '../lib/query';
+import { AllPosts } from '../lib/query';
 import Link from 'next/link';
 const Layout=dynamic(()=>import("../components/Layaout/Layout"))
 export default function Home({ data }) {
@@ -21,7 +21,7 @@ export default function Home({ data }) {
 
         return <article key={post.id} className={`${styles.card} sahel`}>
           <Card
-            actions={[<Link href={`/ps4/${post.slug}`}><Button className={styles.btn} type="primary" shape="round">ادامه مطلب</Button></Link>]}
+            actions={[<Link href={`/${post.categories.nodes[0].name}/${post.slug}`}><Button className={styles.btn} type="primary" shape="round">ادامه مطلب</Button></Link>]}
             style={{ width: 500 },{overflow:"hidden"}}
             title={<h5 className="rtl">{post.title}</h5>}
             cover={<img alt="بازی "  src={post.featuredImage.node.sourceUrl} />}>
@@ -34,7 +34,7 @@ export default function Home({ data }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetcher(AllPost);
+  const res = await fetcher(AllPosts);
   const data = res.data.posts.nodes;
   return {
     props: { data },

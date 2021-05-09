@@ -35,7 +35,8 @@ export async function getStaticProps() {
     const res = await fetcher(XboxPosts);
     const posts = res.data.posts.nodes;
     return {
-        props: { posts }
+        props: { posts },
+        revalidate: 1
     }
 
 }
