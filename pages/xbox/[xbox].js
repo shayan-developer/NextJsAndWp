@@ -1,4 +1,4 @@
-import { Card, Col, Row } from 'antd';
+import { Card, Col, Image, Row } from 'antd';
 import dynamic from 'next/dynamic'
 import Head from 'next/head';
 import Link from 'next/link';
@@ -34,9 +34,12 @@ export default function XboxPost({ post ,comments,LastPosts}) {
                         return <Col xs={24} md={8} key={post.id}>
                             <Card title={post.title}
                                 className={styles.LastPost}
-                                cover={<Link href={`/ps4/${post.slug}`} >
-                                    <img className={styles.imgLast} src={post.featuredImage.node.sourceUrl} />
-                                </Link>}
+                                cover={<div className={styles.BoxImage}>
+                            <Link href={`/xbox/${post.slug}`}>
+                                <Image preview={false} alt="بازی " className={styles.Imgcard} src={post.featuredImage.node.sourceUrl} />
+                            </Link>
+                            <p className={styles.textImg}>برای ادامه مطلب کلیک کنید</p>
+                        </div>}
                                 bordered={false}>
                             </Card>
                         </Col>

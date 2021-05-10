@@ -4,6 +4,7 @@ import Link from 'next/link'
 import React from 'react'
 import Parallelogram from '../../components/Parallelogram/Parallelogram'
 import fetcher from '../../lib/fetcher'
+import Head from"next/head"
 import { XboxPosts } from '../../lib/query'
 import styles from "../../styles/XboxPosts.module.css"
 const Layout = dynamic(() => import("../../components/Layaout/Layout"))
@@ -11,6 +12,9 @@ function Index({ posts }) {
     const { Meta } = Card;
     return (
         <Layout>
+            <Head>
+                <title>اخبار ایکس باکس</title>
+            </Head>
             <Parallelogram> XBOX اخبار</Parallelogram>
             {posts.map((post) => {
                 return <article key={post.id} className={` sahel`} >

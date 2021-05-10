@@ -9,7 +9,13 @@
   font-size: 1rem;
   direction: rtl;
 }
-
+.card{
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  backdrop-filter: blur(30px);
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4));
+}
 .Imgcard{
   cursor: pointer;
   transform-origin: 50% 65%;
