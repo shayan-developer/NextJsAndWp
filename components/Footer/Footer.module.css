@@ -1,0 +1,50 @@
+.Footer{
+    background:linear-gradient(to right bottom , rgba(255,255,255,0.7),rgba(255,255,255,0.5)) ;
+    backdrop-filter: blur(6.0px);
+    height: 100%;
+    margin-top: 2rem;
+    font-family: "sahel",sans-serif;
+    text-align: center;
+    padding: .5rem 0;
+}
+.Footer a{
+    background-color: rgb(224, 223, 223);
+    padding: 0 .5rem;
+    border-radius: 50%;
+    transition: all .5s;
+}
+.text{
+    color: #188FFE; 
+    font-size: .7rem;
+}
+.Footer a:hover{
+    box-shadow: 0px 0px 5px 3px  #188FFE;
+}
+.icons{
+    margin: 1.3 0rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.5rem;
+
+}
+.insta{
+    color: mediumvioletred;
+}
+.facebook{
+    color:royalblue
+}
+.telegram{
+    color: skyblue;
+}
+@media (min-width:780px) {
+    .text{
+      font-size: 1rem;
+    }
+    .icons{
+        font-size: 2.5rem;
+    }
+    .Footer a{
+      padding: 0 .8rem;
+    }
+  }

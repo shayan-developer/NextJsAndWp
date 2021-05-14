@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '../Footer/Footer'
 import Nav from '../Nav/Nav'
 import NavUp from '../NavUp/NavUp'
 import styles from "./Layout.module.css"
@@ -16,9 +17,11 @@ export default function Layout({ children, Header }) {
                     <aside className={`col-3 ${styles.aside}`}>
 
                     </aside>
+                   
                 </div>
 
             </div>
+            <Footer/>
         </>
     )
 }

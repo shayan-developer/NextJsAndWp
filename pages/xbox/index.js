@@ -19,7 +19,7 @@ function Index({ posts }) {
             {posts.map((post) => {
                 return <article key={post.id} className={` sahel`} >
                     <Card
-                        title={<p className="rtl bold">{post.title}</p>}
+                        title={<p className={`rtl bold ${styles.title}`}>{post.title}</p>}
                         className={styles.card}
                         cover={<div className={styles.BoxImage}>
                             <Link href={`/xbox/${post.slug}`}>

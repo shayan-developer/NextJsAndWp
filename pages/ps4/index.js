@@ -1,5 +1,4 @@
 import React from 'react'
-// import Layout from '../../components/Layaout/Layout'
 import styles from '../../styles/ps4.module.css'
 import fetcher from '../../lib/fetcher';
 import { Ps4Posts } from '../../lib/query';
@@ -20,7 +19,7 @@ export default function Index({ data }) {
             {data.map(post => {
                 return <article key={post.id} className={` sahel`}>
                     <Card
-                        title={<p className="rtl bold">{post.title}</p>}
+                        title={<p className={`rtl bold ${styles.title}`}>{post.title}</p>}
                         className={styles.card}
                         cover={<div className={styles.BoxImage}>
                             <Link href={`/ps4/${post.slug}`}>

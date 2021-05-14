@@ -6,7 +6,7 @@
   /* number of lines to show */
   -webkit-box-orient: vertical;
   text-align: right;
-  font-size: 1rem;
+  font-size: .7rem;
   direction: rtl;
 }
 .card{
@@ -43,4 +43,20 @@ filter: brightness(30%);
 }
 .BoxImage:hover .textImg{
   visibility: visible;
+  }
+.title{
+    white-space: normal !important; 
+    font-size: .7rem;
+  }
+  .textCard img{
+    max-width: 100%;
+    height: auto;
+  }
+  @media (min-width:780px) {
+    .textCard{
+      font-size: 1.1rem;
+    }
+    .title{
+      font-size: 1.1rem;
+    }
   }

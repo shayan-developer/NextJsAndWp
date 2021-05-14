@@ -5,10 +5,18 @@
     display: -webkit-box;
     -webkit-line-clamp: 3; /* number of lines to show */
     -webkit-box-orient: vertical;
-    font-size: 1rem;
+    font-size: .7rem;
     text-align: right;
     direction: rtl;
   }
+.title{
+    white-space: normal !important; 
+    font-size: .7rem;
+  }
+.textCard img{
+    max-width: 100%;
+    height: auto;
+}
   .card{
     margin-bottom: 2rem;
     border-radius: 1rem;
@@ -47,4 +55,11 @@
   .BoxImage:hover .textImg{
     visibility: visible;
     }
-  
+    @media (min-width:780px) {
+      .textCard{
+        font-size: 1.1rem;
+      }
+      .title{
+        font-size: 1.1rem;
+      }
+    }

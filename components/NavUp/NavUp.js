@@ -11,7 +11,7 @@ export default function NavUp() {
             GameTuBe
               </a>
         </Link>
-        <ul className="navbar-nav  mb-2 mb-lg-0">
+        <ul className="navbar-nav  ">
         <li className={`nav-item `}>
             <Link href="/about" >
               <a className={`nav-link active ${styles.navText}`} aria-current="page">

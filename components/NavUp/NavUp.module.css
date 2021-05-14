@@ -5,11 +5,16 @@
     color: #25C8D8 !important;
 }
 .navText{
-    font-size: 1rem;
+    font-size: .8rem;
     color: #188FFE !important;
 }
 .brand{
     font-family: 'Press Start 2P', cursive;
     color: #188FFE !important;
     text-shadow: 0 3px #4d4c4c;
+}
+@media (min-width:780px){
+    .navText{
+        font-size: 1.1rem;
+    }
 }

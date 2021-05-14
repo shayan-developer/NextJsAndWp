@@ -21,13 +21,14 @@ export default function Home({ data }) {
         return <article key={post.id} className={`sahel`}>
           <Card
             className={styles.card}
-            title={<p className="rtl bold">{post.title}</p>}
+            title={<p className={`rtl bold ${styles.title}`}>{post.title}</p>}
             cover={<div className={styles.BoxImage}>
               <Link  href={`/${post.categories.nodes[0].name}/${post.slug}`}>
               <Image preview={false} alt="بازی " className={styles.Imgcard} src={post.featuredImage.node.sourceUrl} />
             </Link>
             <p className={styles.textImg}>برای ادامه مطلب کلیک کنید</p>
-            </div>}>
+            </div>}
+            >
             <Meta description={<div className={styles.textCard} dangerouslySetInnerHTML={{ __html: post.content }} />} />
           </Card>
         </article>
