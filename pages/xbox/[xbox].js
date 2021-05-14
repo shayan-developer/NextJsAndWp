@@ -22,17 +22,21 @@ export default function XboxPost({ post ,comments,LastPosts}) {
             <article className={`my-5 sahel`}>
                 <Card
                    className={styles.card}
-                    title={<p className="rtl bold">{post.title}</p>}
                     cover={<img alt="بازی " src={post.featuredImage.node.sourceUrl} />}
                 >
-                    <Meta description={<div className={styles.text} dangerouslySetInnerHTML={{ __html: post.content }} />} />
+                    <Meta description={<div className={styles.textCard} dangerouslySetInnerHTML={{ __html: post.content }} />} />
                 </Card>
             </article>
             <Parallelogram> مطالب مشابه </Parallelogram>
             <Row gutter={16}>
                     {MyLastPosts.map((post) => {
                         return <Col xs={24} md={8} key={post.id}>
-                            <Card title={post.title}
+                            <Card 
+                            title={
+                                <Link href={`/ps4/${post.slug}`}>
+                                <p className={`rtl bold ${styles.title}`}>{post.title}</p>
+                                </Link>
+                        }
                                 className={styles.LastPost}
                                 cover={<div className={styles.BoxImage}>
                             <Link href={`/xbox/${post.slug}`}>

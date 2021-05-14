@@ -6,14 +6,18 @@
     margin-bottom: 4rem;
     font-family: "sahel", sans-serif;
 }
-
-.text {
+.textCard img{
+    max-width: 100%;
+    height: auto;
+}
+.textCard {
     color: #000 !important;
-    font-size: 1rem;
+    font-size: .7rem;
     text-align: right;
     direction: rtl;
 }
-.card{
+
+.card {
     border-radius: 1rem;
     backdrop-filter: blur(30px);
     background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4));
@@ -37,21 +41,25 @@
 .imgLast:hover {
     transform: scale(1.1);
 }
-.Imgcard{
+
+.Imgcard {
     cursor: pointer;
     transform-origin: 50% 65%;
     transition: transform 2s, filter 2s ease-in-out;
-  }
-.BoxImage{
+}
+
+.BoxImage {
     overflow: hidden;
     position: relative;
-  }
-  .BoxImage:hover .Imgcard{
-  transform: scale(1.1);
-  transition: ease-in 1s;
-  filter: brightness(30%);
-  }
-  .textImg{
+}
+
+.BoxImage:hover .Imgcard {
+    transform: scale(1.1);
+    transition: ease-in 1s;
+    filter: brightness(30%);
+}
+
+.textImg {
     color: #ffffff;
     position: absolute;
     top: 50%;
@@ -61,7 +69,21 @@
     visibility: hidden;
     transition: all 1s ease-in-out;
     transition-delay: .7s;
-  }
-  .BoxImage:hover .textImg{
+}
+
+.BoxImage:hover .textImg {
     visibility: visible;
+}
+
+.title {
+    white-space: normal !important;
+    font-size: .7rem;
+}
+@media (min-width:780px) {
+    .textCard{
+      font-size: 1.1rem;
     }
+    .title{
+      font-size: 1.1rem;
+    }
+  }

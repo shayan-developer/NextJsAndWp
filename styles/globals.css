@@ -4,26 +4,24 @@
 body {
   padding: 0;
   margin: 0;
-  /* background: rgb(193,155,218);
-  background: linear-gradient(90deg, rgba(193,155,218,1) 33%, rgba(205,72,231,1) 63%); */
-  background-image: url("../public/bg.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
+  background: rgb(26,131,255);
+  background: linear-gradient(90deg, rgba(26,131,255,1) 52%, rgba(0,176,255,1) 88%);
 }
 
 * {
   box-sizing: border-box;
 }
+
 @font-face {
   font-family: "sahel";
   src: url("../public/fonts/Sahel.woff")format("woff");
 }
-.sahel{
-  font-family: "sahel",sans-serif;
+
+.sahel {
+  font-family: "sahel", sans-serif;
 }
-.bar-of-progress{
+
+.bar-of-progress {
   z-index: 100;
 }
 
@@ -32,18 +30,17 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey; 
+  box-shadow: inset 0 0 5px grey;
 }
- 
 
 ::-webkit-scrollbar-thumb {
-  background: #188FFE ; 
+  background: #188FFE;
 }
-
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #0081fa; 
+  background: #0081fa;
 }
-.rtl{
+
+.rtl {
   direction: rtl;
 }

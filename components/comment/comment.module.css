@@ -1,16 +1,27 @@
 .box{
-    width: 100% !important;
+    width: 90% !important;
     background:linear-gradient(to right bottom , rgba(255,255,255,0.5),rgba(255,255,255,0.3)) ;
     backdrop-filter: blur(30px);
     border-radius: 1rem;
     margin-bottom: 3rem;
-    padding: .7rem;
+    padding: .2rem .5rem;
 
 }
 .text{
-    font-size: .9rem;
+    font-size: .7rem;
     direction: rtl;
     overflow: hidden;
     text-align: right;
-    padding: 0 .5rem;
+    padding: 0 1rem;
 }
+.info{
+    font-size: .8rem;
+}
+@media (min-width:780px) {
+    .text{
+      font-size: 1rem;
+    }
+    .info{
+      font-size: 1.3rem;
+    }
+  }

@@ -2,7 +2,6 @@ import React from 'react'
 import styles from "./Header.module.css"
 import { Carousel, Image } from 'antd';
 const contentStyle = {
-    height: '90vh',
     width: "100%",
     color: '#fff',
     borderRadius: '1rem',
@@ -18,7 +17,7 @@ export default function Header() {
                             <Image  className={styles.image} src="../re.jpg" preview={false} />
                         </div>
                         <div className={styles.box}>
-                            <h3 className={styles.text}>سیستم مورد نیاز مشخص شد</h3>
+                            <p className={styles.text}>سیستم مورد نیاز مشخص شد</p>
                         </div>
                     </div>
 
@@ -27,7 +26,7 @@ export default function Header() {
                             <Image className={styles.image} src="../battlefield6.jpg" preview={false} />
                         </div>
                         <div className={styles.box}>
-                            <h3 className={styles.text}>سیستم مورد نیاز مشخص شد</h3>
+                            <p className={styles.text}>سیستم مورد نیاز مشخص شد</p>
                         </div>
                     </div>
 
@@ -36,7 +35,7 @@ export default function Header() {
                             <Image className={styles.image} src="../lastofus.jpg" preview={false} />
                         </div>
                         <div className={styles.box}>
-                            <h3 className={styles.text}>سیستم مورد نیاز مشخص شد</h3>
+                            <p className={styles.text}>سیستم مورد نیاز مشخص شد</p>
                         </div>
                     </div>
                 </Carousel>

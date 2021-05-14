@@ -6,7 +6,10 @@ export default function MyComment({ photo, name, children }) {
     return (
         <div className={styles.box} >
             <Divider style={{ borderWidth: 2, borderColor: '#188FFE', color: '#188FFE' }} orientation="right">
-                {name} <Avatar size={55} icon={photo || <UserOutlined />} />
+                <div className={styles.info}>
+                     <span>{name} </span>
+                     <Avatar size={{xs:40, sm:40,md:50, lg:50}}  icon={photo || <UserOutlined />} /> 
+                </div>
             </Divider>
             <div className={`${styles.text} sahel`}
                 dangerouslySetInnerHTML={{ __html: children }}

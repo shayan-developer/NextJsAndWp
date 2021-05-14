@@ -6,11 +6,15 @@
     margin-bottom: 4rem;
     font-family: "sahel",sans-serif;
 }
-.text{
-    color: #000 !important;
-    font-size: 1rem;
-    text-align: right;
-    direction: rtl;
+.textCard img{
+  max-width: 100%;
+  height: auto;
+}
+.textCard {
+  color: #000 !important;
+  font-size: .7rem;
+  text-align: right;
+  direction: rtl;
 }
 .card{
     border-radius: 1rem;
@@ -53,4 +57,16 @@
   }
   .BoxImage:hover .textImg{
     visibility: visible;
+    }
+    .title {
+      white-space: normal !important;
+      font-size: .7rem;
+  }
+  @media (min-width:780px) {
+      .textCard{
+        font-size: 1.1rem;
+      }
+      .title{
+        font-size: 1.1rem;
+      }
     }
